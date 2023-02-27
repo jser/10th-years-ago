@@ -4,7 +4,7 @@
 
 ## Usage
 
-- [ ] Write usage instructions
+- https://jser.info/10th-years-ago/
 
 ## Changelog
 
