@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSer.info: 10th years ago</title>
+</head>
+<body>
+<div id="js-app">
+
+</div>
+<script type="module">
+    const today = new Date();
+    const posts = await fetch("https://jser.info/posts.json").then(res => res.json());
+    const posts10YearsAgoAndNear = posts.filter(post => {
+        const postDate = new Date(post.date);
+        return postDate.getFullYear() === today.getFullYear() - 10 && postDate.getMonth() === today.getMonth();
+    });
+    console.log({
+        posts10YearsAgoAndNear
+    });
+    const nearlatesttPosts = posts10YearsAgoAndNear.filter(post => {
+        return today.getDate() - new Date(post.date).getDate() <= 7;
+    });
+    const latestIn10YearsAgo = nearlatesttPosts.at(-1);
+    const app = document.getElementById("js-app");
+    app.innerHTML = `
+        <h1>JSer.info 10th years ago</h1>
+        <ul>
+            <li><a href="${latestIn10YearsAgo.url}">${latestIn10YearsAgo.title}</a></li>
+        </ul>
+    `;
+</script>
+</body>
+</html>

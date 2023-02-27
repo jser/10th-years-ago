@@ -1,0 +1,31 @@
+{
+  "name": "@jser/10th-years-ago",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jser/10th-years-ago/tree/master/",
+  "bugs": {
+    "url": "https://github.com/jser/10th-years-ago/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jser/10th-years-ago.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "main": "lib/10th-years-ago.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
