@@ -29,7 +29,7 @@
         return postDate.getFullYear() === today.getFullYear() - 10 && postDate.getMonth() === today.getMonth();
     });
     const nearlatestPosts = posts10YearsAgoAndNear.filter(post => {
-        return today.getDate() - new Date(post.date).getDate() <= 7;
+        return today.getDate() - new Date(post.date).getDate() <= 10; // 10日以内
     });
     const latestIn10YearsAgo = nearlatestPosts.at(-1);
     const app = document.getElementById("js-app");
